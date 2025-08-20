@@ -4,6 +4,7 @@ pipeline {
     stage('Checkout') {
       steps {
         //git 'https://github.com/devopssteps/day26.git'
+        echo 'test'
       }
     }
     stage('Run Ansible') {
