@@ -9,8 +9,10 @@ pipeline {
     }
     stage('Run Ansible') {
       steps {
-        sh 'ansible-playbook -i hosts p1.yaml'
-        }
+        sshagent(['26A']) {
+            sh 'ansible-playbook -i hosts p1.yaml'
+        }  
+      }
     }
   }
 }
