@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Run Ansible') {
       steps {
-        sshagent(['day26bbb']) {
+        sshagent(['26cccc']) {
             sh 'ansible-playbook -i hosts p1.yaml'
             //sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.221.103.118 "echo Connected from Jenkins!"'
         }  
